@@ -1,0 +1,13 @@
+<div class="header-components">
+  <nb-select
+    placeholder="Select theme"
+    (selectedChange)="ChangeThemes($event)"
+    class="theme-select"
+  >
+    <nb-option *ngFor="let item of listThemes" [value]="item.description">
+      {{ item.description }}
+    </nb-option>
+  </nb-select>
+  <mat-icon class="icon">home</mat-icon>
+  <mat-icon class="icon">logout</mat-icon>
+</div>

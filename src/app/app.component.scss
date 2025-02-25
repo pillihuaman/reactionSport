@@ -1,0 +1,37 @@
+@use '@nebular/theme/styles/theming'  as *;
+nb-layout {
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgb(134, 42, 42) !important;
+  overflow-x: auto; /* Permitir scroll horizontal */
+}
+
+nb-layout-column {
+  width: 100%;
+  background-color: inherit; /* Mantener el color de fondo del layout */
+  overflow-x: auto; /* Habilitar scroll horizontal si hay desbordamiento */
+  padding: 1rem;
+}
+
+.scrollable-content {
+  width: 100%;
+  background-color: inherit; /* Aplicar el mismo fondo */
+  -webkit-overflow-scrolling: touch;
+}
+
+::ng-deep .table-wrapper {
+  width: 100%;
+  background-color: inherit; /* Color consistente con el layout */
+  overflow-x: auto;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+
+@media screen and (max-width: 768px) {
+  ::ng-deep .table-wrapper {
+    padding: 0.5rem;
+  }
+  nb-layout-column {
+    padding: 0.5rem;
+  }
+}
